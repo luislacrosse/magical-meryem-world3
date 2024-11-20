@@ -1,12 +1,36 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { FloatingElements } from "@/components/FloatingElements";
+import { PhotoGallery } from "@/components/PhotoGallery";
+import { FavoriteThings } from "@/components/FavoriteThings";
+import { Star } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen gradient-bg overflow-hidden relative">
+      <FloatingElements />
+      
+      <main className="container mx-auto px-4 py-12">
+        <div className="text-center mb-16 animate-float">
+          <h1 className="font-bubblegum text-6xl md:text-7xl mb-4 text-vibrant-purple">
+            MERYEM
+            <Star className="inline-block ml-4 w-8 h-8" fill="currentColor" />
+          </h1>
+          <p className="text-2xl text-gray-600">Welcome to My Magical World!</p>
+        </div>
+
+        <section className="mb-16">
+          <h2 className="font-bubblegum text-4xl text-center mb-8 text-vibrant-purple">
+            My Photos
+          </h2>
+          <PhotoGallery />
+        </section>
+
+        <section>
+          <h2 className="font-bubblegum text-4xl text-center mb-8 text-vibrant-purple">
+            My Favorite Things
+          </h2>
+          <FavoriteThings />
+        </section>
+      </main>
     </div>
   );
 };
